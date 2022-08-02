@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="card">
+    <div class="main-box card-body">
+        <form action = "/submit" method="post" enctype="multipart/form-data" class="form-group">
+            <h4>自動インストールするOSは何ですか?</h4>
+            <select name="select_os" class="form-control">
+                <option value="windows">Windows</option>
+                <option value="mac">Mac</option>
+            </select>
+            <h4>ファイル名を決めて下さい</h4>
+            <p><input type="text" name="file_name" class="form-control" required></p>
+            <h4>VSCodeの拡張機能名を入力して下さい</h4>
+            <p><textarea name="extensions" cols="30" rows="10" class="form-control" required></textarea></p>
+            <p><input type="submit" value="送信" class="btn btn-outline-primary"></p>
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}

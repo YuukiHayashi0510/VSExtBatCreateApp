@@ -1,0 +1,21 @@
+header a{
+    margin-left: 12rem;
+}
+
+.card {
+    margin: 0 auto;
+    margin-top: 3rem;
+    width: 50%;
+}
+
+.main-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.btn-outline-primary {
+    margin-left: 7.5rem;
+    margin-top: 1.3rem;
+    width: 40%;
+}
