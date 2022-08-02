@@ -1,4 +1,4 @@
-
+# os define
 WINDOWS = "windows"
 MAC = "mac"
 
