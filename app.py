@@ -23,7 +23,7 @@ def submit():
         exts, exts_n = get_extensions(input_data)
         body = create_body(select_os,exts, exts_n)
         create_file(path,body)
-        return render_template('result.html', select_os=select_os,file_name=file_name,input_data=input_data)
+        return render_template('result.html',path=path,file_name=file_name,exts=exts)
 
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0', port='80')

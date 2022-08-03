@@ -1,12 +1,12 @@
 /* index.html */
-header a{
-    margin-left: 17rem;
+header a {
+  margin-left: 17rem;
 }
 
 .card {
-    margin: 0 auto;
-    margin-top: 3rem;
-    width: 50%;
+  margin: 0 auto;
+  margin-top: 3rem;
+  width: 50%;
 }
 
 .main-box {
@@ -16,12 +16,25 @@ header a{
 }
 
 .btn-outline-primary {
-    margin-left: 7.5rem;
-    margin-top: 1.3rem;
-    width: 40%;
+  margin-left: 7.5rem;
+  margin-top: 1.3rem;
+  width: 40%;
 }
 
 /* result.html */
 .result-box {
-    margin-left: 6rem;
+}
+
+.exts-box {
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  padding: 0.75rem 0.75rem;
+}
+
+footer {
+  margin-top: 2rem;
+  height: 4%;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
 }

@@ -1,3 +1,6 @@
+# ファイルに付与する日付
+from datetime import datetime
+
 # os define
 WINDOWS = "windows"
 MAC = "mac"
@@ -11,11 +14,13 @@ def return_path(SELECTED_OS, FILE_NAME):
     Return: path
     """
     path = ""
+    now = datetime.now()
+    today = now.strftime("%Y%m%d%H%M%S")
     file_name = FILE_NAME
     if SELECTED_OS == WINDOWS:
-        path= "./static/files/"+WINDOWS+"/"+file_name+".bat"
+        path= "./static/files/"+WINDOWS+"/"+today+"_"+file_name+".bat"
     else:
-        path= "./static/files/"+MAC+"/"+file_name+".command"
+        path= "./static/files/"+MAC+"/"+today+"_"+file_name+".command"
     return path
 
 

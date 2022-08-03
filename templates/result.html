@@ -2,15 +2,19 @@
 <div class="card">
     <div class="card-body result-box">
         <h5 class="card-title">ファイル名</h5>
-        <h6 class="card-subtitle mb-2 text-muted">{{file_name}}</h6>
+        <h6 class="card-subtitle mb-2 text-muted form-control">{{file_name}}</h6>
         <h5>拡張機能</h5>
-        <h6 class="card-subtitle mb-2 text-muted">{{input_data}}</h6>
+        <h6 class="card-subtitle mb-2 text-muted">
+            <div class="exts-box">
+                <ol>
+                    {% for ext in exts %}
+                        <li>{{ext}}</li>
+                    {% endfor %}
+                    </ol>
+            </div>
+        </h6>
         <h5>バッチファイル</h5>
-        {% if select_os == "windows" %}
-        <a href="../static/files/{{select_os}}/{{file_name}}.bat" class="card-link file">{{file_name}}.bat</a>
-        {% else %}
-        <a href="../static/files/{{select_os}}/{{file_name}}.command" class="card-link file">{{file_name}}.command</a>
-        {% endif %} <br>
+        <a href=".{{path}}" class="card-link file">ファイルをダウンロードする</a>
         <a href="/" class="card-link">TOPに戻る</a>
     </div>
 </div>
