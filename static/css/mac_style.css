@@ -23,6 +23,13 @@ header a {
 
 /* result.html */
 .result-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.result-container {
+    width: 80%;
 }
 
 .exts-box {
