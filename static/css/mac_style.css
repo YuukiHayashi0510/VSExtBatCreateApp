@@ -23,13 +23,13 @@ header a {
 
 /* result.html */
 .result-box {
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
 }
 
 .result-container {
-    width: 80%;
+  width: 80%;
 }
 
 .exts-box {
@@ -39,7 +39,8 @@ header a {
 }
 
 footer {
-  margin-top: 2rem;
+  position: absolute;
+  bottom: 0;
   height: 4%;
   width: 100%;
   text-align: center;

@@ -2,22 +2,31 @@
 <div class="card">
     <div class="card-body result-box">
         <div class="result-container">
-            <h5 class="card-title">ファイル名</h5>
-            <h6 class="card-subtitle mb-2 text-muted form-control">{{file_name}}</h6>
-            <h5>拡張機能</h5>
-            <h6 class="card-subtitle mb-2 text-muted">
+            <section>
+                <h5 class="card-title">ファイル名</h5>
+                <h6 class="card-subtitle mb-2 text-muted form-control">{{file_name}}</h6>
+            </section>
+            <section class="open">
+                <h5 id="ext-title" class="title">拡張機能</h5>
+                <h6 class="card-subtitle mb-2 text-muted" id="ext-list">
+                    <div class="exts-box">
+                        <ol>
+                            {% for ext in exts %}
+                                <li>{{ext}}</li>
+                            {% endfor %}
+                            </ol>
+                    </div>
+                </h6>
+            </section>
+            <section>
+                <h5>バッチファイル</h5>
                 <div class="exts-box">
-                    <ol>
-                        {% for ext in exts %}
-                            <li>{{ext}}</li>
-                        {% endfor %}
-                        </ol>
+                    <a href=".{{path}}" class="card-link file">ファイルをダウンロードする</a>
                 </div>
-            </h6>
-            <h5>バッチファイル</h5>
-            <a href=".{{path}}" class="card-link file">ファイルをダウンロードする</a>
+            </section>
             <a href="/" class="card-link">TOPに戻る</a>
         </div>
     </div>
 </div>
+<script src="../static/js/result.js"></script>
 {% endblock %}

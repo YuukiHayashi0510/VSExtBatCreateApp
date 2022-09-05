@@ -1,0 +1,28 @@
+{% extends "layout.html" %} {% block content %}
+<div class="card">
+  <div class="card-body result-box">
+  <div class="result-container">
+      <h1>履歴</h1>
+      <h2>Mac</h2>
+      <div class="exts-box">
+        {% for file in mac %}
+        <div>
+          <a href="{{ mac_dir }}/{{ file }}" class="mac_filename">{{ file }}</a>
+          <p class="mac_file_detail"></p>
+        </div>
+        {% endfor %}
+      </div>
+      <h2>Windows</h2>
+      <div class="exts-box">
+      {% for file in win %}
+      <div>
+        <a href="{{ win_dir }}/{{ file }}">{{ file }}</a>
+      </div>
+      {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

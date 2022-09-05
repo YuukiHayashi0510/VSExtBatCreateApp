@@ -38,9 +38,12 @@ header a{
 }
 
 footer {
-    margin-top: 2rem;
+    position: absolute;
+    bottom: 0;
     height: 4%;
     width: 100%;
     text-align: center;
     font-weight: bold;
 }
+
+/* history.html */
