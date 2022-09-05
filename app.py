@@ -3,9 +3,10 @@ from flask import (
      request,
      render_template)
 from bat_create import *
+import os
 
-MACOS_FOLDER= "/static/files/mac"
-WINDOWS_FOLDER= "/static/files/windows"
+MACOS_FOLDER= "./static/files/mac"
+WINDOWS_FOLDER= "./static/files/windows"
 
 app = Flask(__name__)
 
@@ -25,5 +26,11 @@ def submit():
         create_file(path,body)
         return render_template('result.html',path=path,file_name=file_name,exts=exts)
 
+@app.route('/history')
+def history():
+    mac_files = os.listdir(MACOS_FOLDER)
+    windows_files = os.listdir(WINDOWS_FOLDER)
+    return render_template('history.html',mac=mac_files,win=windows_files,mac_dir=MACOS_FOLDER,win_dir=WINDOWS_FOLDER)
+
 if __name__ == "__main__":
-    app.run(debug=True, host='0.0.0.0', port='80')
+    app.run(debug=True)
